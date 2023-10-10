@@ -5,7 +5,7 @@
 | Column             | Type   | Options                       |
 | ------------------ | ------ | ----------------------------- |
 | nickname           | string | null: false                   |
-| email              | string | null: false, unique_key: true |
+| email              | string | null: false, unique: true     |
 | encrypted_password | string | null: false                   |
 | last_name          | string | null: false                   |
 | first_name         | string | null: false                   |
@@ -25,7 +25,7 @@
 | name              | string     | null: false                    |
 | description       | text       | null: false                    |
 | category_id       | integer    | null: false                    |
-| item_condition_id | integer    | null: false, foreign_key: true |
+| item_condition_id | integer    | null: false,                   |
 | shipping_cost_id  | integer    | null: false                    |
 | prefecture_id     | integer    | null: false                    |
 | shipping_time_id  | integer    | null: false                    |
@@ -48,6 +48,7 @@
 
 - belongs_to :user
 - belongs_to :item
+- has_one : adress
 
 ## addressesテーブル
 
