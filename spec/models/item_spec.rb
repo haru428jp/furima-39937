@@ -28,28 +28,28 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include("Description can't be blank")
       end
-      it 'category_idが空では登録できない' do
-        @item.category_id = ''
+      it 'category_idの値が1では登録できない' do
+        @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
-      it 'item_condition_idが空では登録できない' do
-        @item.item_condition_id = ''
+      it 'item_condition_idの値が1では登録できない' do
+        @item.item_condition_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Item condition can't be blank")
       end
-      it 'shipping_cost_idが空では登録できない' do
-        @item.shipping_cost_id = ''
+      it 'shipping_cost_idの値が1では登録できない' do
+        @item.shipping_cost_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping cost can't be blank")
       end
-      it 'prefecture_idが空では登録できない' do
-        @item.prefecture_id = ''
+      it 'prefecture_idの値が1では登録できない' do
+        @item.prefecture_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Prefecture can't be blank")
       end
-      it 'shipping_time_idが空では登録できない' do
-        @item.shipping_time_id = ''
+      it 'shipping_time_idの値が1では登録できない' do
+        @item.shipping_time_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Shipping time can't be blank")
       end
