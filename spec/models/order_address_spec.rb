@@ -7,7 +7,7 @@ RSpec.describe OrderAddress, type: :model do
 
   describe '配送先の保存' do
     context '配送先を保存できる場合' do
-      it 'user_id、item_id、zip_code、prefecture_id、city、block、building、phone_numberが存在すれば保存できる' do
+      it 'user_id、item_id、zip_code、prefecture_id、city、block、building、phone_number、tokenが存在すれば保存できる' do
         expect(@order_address).to be_valid
       end
       it 'buildingが空でも保存できる' do
@@ -76,6 +76,11 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.phone_number = '０3-1234-5678'
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Phone number is invalid. Input only half-width number")
+      end
+      it 'tokenが空だと保存できない' do
+        @order_address.token = nil
+        @order_address.valid?
+        expect(@order_address.errors.full_messages).to include("Token can't be blank")
       end
     end
   end
