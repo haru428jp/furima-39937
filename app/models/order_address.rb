@@ -1,6 +1,6 @@
 class OrderAddress
   include ActiveModel::Model
-  attr_accessor :item_id, :user_id, :zip_code, :prefecture_id, :city, :block, :building, :phone_number
+  attr_accessor :item_id, :user_id, :zip_code, :prefecture_id, :city, :block, :building, :phone_number, :token
 
   with_options presence: true do
     validates :item_id
@@ -10,6 +10,7 @@ class OrderAddress
     validates :city
     validates :block
     validates :phone_number, format: { with: /\A\d{10,11}\z/, message: "is invalid. Input only half-width number"}
+    validates :token
   end
 
   def save
