@@ -25,7 +25,7 @@
 | name              | string     | null: false                    |
 | description       | text       | null: false                    |
 | category_id       | integer    | null: false                    |
-| item_condition_id | integer    | null: false,                   |
+| item_condition_id | integer    | null: false                    |
 | shipping_cost_id  | integer    | null: false                    |
 | prefecture_id     | integer    | null: false                    |
 | shipping_time_id  | integer    | null: false                    |
@@ -54,7 +54,7 @@
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| zip_cord      | string     | null: false                    |
+| zip_code      | string     | null: false                    |
 | prefecture_id | integer    | null: false                    |
 | city          | string     | null: false                    |
 | block         | string     | null: false                    |
